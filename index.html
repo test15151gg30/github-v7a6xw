@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レトロFPSゲーム２</title>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #000; }
+        #blocker {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #instructions {
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+        }
+        #crosshair {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="blocker">
+        <div id="instructions">
+            <h1>レトロFPSゲーム</h1>
+            <p>クリックしてゲームを開始</p>
+            <p>WASD: 移動<br>マウス: 視点操作<br>クリック: 射撃</p>
+        </div>
+    </div>
+    <div id="score">スコア: 0</div>
+    <div id="crosshair"></div>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
